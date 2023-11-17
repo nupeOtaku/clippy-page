@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-container {
+    @apply max-w-6xl mx-auto text-center px-10;
+}
+
+.button-container {
+    @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0
+}
+
+.section-content {
+    @apply mx-auto max-w-3xl text-grayishBlue;
+}
+
+.faicon:hover {
+    filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%);
+}
+
+@layer base {
+    h3 {
+        @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl
+    }
+
+    h5 {
+        @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
+    }
+}
+
+
+body {
+    background-image: url('../src/images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width:576px) {
+    body {
+        background-image: url('../src/images/bg-header-mobile.png');
+
+    }
+}
